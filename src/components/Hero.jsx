@@ -1,7 +1,6 @@
 import { Link } from "react-scroll";
 import FadeInSection from "./FadeInSection";
-import Countdown from "./Countdown";
-import titanicHero from "../assets/Titanic.jpeg";
+import heroBg from "../assets/hero-bg.png";
 
 const scrollProps = {
   smooth: true,
@@ -14,7 +13,7 @@ export default function Hero() {
     <section className="relative z-0 flex min-h-screen items-center justify-center overflow-hidden px-4 pt-16">
       <div
         className="hero-bg pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${titanicHero})` }}
+        style={{ backgroundImage: `url(${heroBg})` }}
         aria-hidden
       />
       <div className="pointer-events-none absolute inset-0 bg-black/55" aria-hidden />
@@ -43,12 +42,8 @@ export default function Hero() {
             className="animate-fadeInUp mt-6 font-sans text-sm tracking-[0.25em] text-white/70"
             style={{ animationDelay: "900ms" }}
           >
-            7 PM · APRIL 24, 1912
+            7 PM · APRIL 24, 2026
           </p>
-
-          <FadeInSection delay={1000}>
-            <Countdown />
-          </FadeInSection>
 
           <div
             className="animate-fadeInUp mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"

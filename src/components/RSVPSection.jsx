@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import FadeInSection from "./FadeInSection";
+import Countdown from "./Countdown";
 
 const mealOptions = ["Chicken", "Fish", "Vegetarian"];
 const relationshipOptions = [
@@ -154,7 +155,7 @@ export default function RSVPSection() {
                     </p>
                     <div className="mx-auto mt-4 max-w-xs border-b border-amber-200" />
                     <p className="mt-6 font-sans text-xs text-[#2D2D2D]/70">
-                      PLEASE CONFIRM BY APRIL 10, 1912
+                      PLEASE CONFIRM BY APRIL 10, 2026
                     </p>
                   </header>
                 </FadeInSection>
@@ -357,6 +358,7 @@ export default function RSVPSection() {
               <div className="text-center">
                 <p className="font-serif text-4xl text-[#B8860B]">✓</p>
                 <h3 className="mt-4 font-serif text-3xl text-[#2D2D2D]">You&apos;re all set!</h3>
+                <Countdown valueClassName="text-slate-800" labelClassName="text-slate-500" />
                 <p className="mt-6 font-sans text-sm leading-relaxed text-[#2D2D2D]/80">
                   Thank you, <span className="font-medium">{summary.name}</span>. We recorded your
                   response as <span className="font-medium">{summary.attendance}</span>

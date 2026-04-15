@@ -23,7 +23,7 @@ export default function TimelineSection() {
   return (
     <section
       id="timeline"
-      className="relative flex min-h-screen items-center justify-center bg-cover bg-center bg-no-repeat py-24 md:py-0"
+      className="relative flex min-h-screen items-center justify-center bg-cover bg-center bg-no-repeat px-4 py-24 md:px-6 md:py-0"
       style={{ backgroundImage: "url('/src/assets/floral-bg.png')" }}
     >
       <div className="mx-auto w-full max-w-4xl px-6 md:px-12">

@@ -18,7 +18,7 @@ const getTimeLeft = () => {
   };
 };
 
-export default function Countdown() {
+export default function Countdown({ valueClassName = "text-white", labelClassName = "text-white/60" }) {
   const [timeLeft, setTimeLeft] = useState(getTimeLeft);
 
   useEffect(() => {
@@ -33,8 +33,10 @@ export default function Countdown() {
     <div className="mt-4 flex justify-center gap-6">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="text-center">
-          <div className="font-serif text-4xl font-bold text-white">{String(value).padStart(2, "0")}</div>
-          <div className="mt-1 font-sans text-xs uppercase tracking-widest text-white/60">{unit}</div>
+          <div className={`font-serif text-4xl font-bold ${valueClassName}`}>
+            {String(value).padStart(2, "0")}
+          </div>
+          <div className={`mt-1 font-sans text-xs uppercase tracking-widest ${labelClassName}`}>{unit}</div>
         </div>
       ))}
     </div>
