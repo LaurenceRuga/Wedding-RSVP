@@ -31,7 +31,7 @@ export default function DressCodeSection() {
       <div className="pointer-events-none absolute inset-0 bg-black/50" aria-hidden />
       <div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-12 md:grid-cols-2">
         <FadeInSection delay={100}>
-          <div className="mx-4 rounded-3xl bg-white/15 p-10 backdrop-blur-md md:mx-0">
+          <div className="mx-4 rounded-3xl bg-white/15 p-10 backdrop-blur-[2px] md:mx-0">
             <FadeInSection delay={0}>
               <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-[#B8860B]">
                 Dress Code
@@ -62,7 +62,7 @@ export default function DressCodeSection() {
         </FadeInSection>
 
         <FadeInSection delay={150}>
-          <div className="mx-4 rounded-3xl bg-white/15 p-10 backdrop-blur-md md:mx-0">
+          <div className="mx-4 rounded-3xl bg-white/15 p-10 backdrop-blur-[2px] md:mx-0">
             <FadeInSection delay={0}>
               <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-[#B8860B]">
                 DOs &amp; DON&apos;Ts

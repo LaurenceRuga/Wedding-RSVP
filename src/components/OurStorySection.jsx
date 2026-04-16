@@ -13,7 +13,7 @@ export default function OurStorySection() {
         aria-hidden
       />
       <div className="pointer-events-none absolute inset-0 bg-black/50" aria-hidden />
-      <div className="relative mx-4 max-w-2xl rounded-3xl bg-white/15 p-10 text-center backdrop-blur-md md:mx-auto md:p-16">
+      <div className="relative mx-4 max-w-2xl rounded-3xl bg-white/15 p-10 text-center backdrop-blur-[2px] md:mx-auto md:p-16">
         <FadeInSection delay={0}>
           <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-[#B8860B]">
             Our Story

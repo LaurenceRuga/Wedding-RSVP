@@ -33,7 +33,6 @@ export default function RSVPSection() {
   const [summary, setSummary] = useState(null);
 
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [relationship, setRelationship] = useState("");
   const [attendance, setAttendance] = useState("Attending");
   const [meal, setMeal] = useState("Chicken");
@@ -52,8 +51,8 @@ export default function RSVPSection() {
     event.preventDefault();
     setError("");
 
-    if (!name.trim() || !email.trim()) {
-      setError("Full name and email address are required.");
+    if (!name.trim()) {
+      setError("Full name is required.");
       return;
     }
 
@@ -81,7 +80,6 @@ export default function RSVPSection() {
 
     setSummary({
       name: name.trim(),
-      email: email.trim(),
       relationship,
       attendance,
       meal: attendance === "Declined" ? "N/A" : meal,
@@ -168,7 +166,7 @@ export default function RSVPSection() {
 
                 <div className="mt-8 space-y-6">
                   <FadeInSection delay={100}>
-                    <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-x-8 gap-y-6">
                       <div className="md:col-span-2">
                         <label className="mb-2 block font-sans text-xs uppercase tracking-widest text-slate-700">
                           Relationship to Couple
@@ -200,18 +198,6 @@ export default function RSVPSection() {
                         />
                       </div>
 
-                      <div>
-                        <label className="mb-2 block font-sans text-xs uppercase tracking-widest text-slate-700">
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="e.g. juan@email.com"
-                          className="w-full border-b-2 border-slate-300 bg-transparent py-2 font-sans text-sm text-slate-900 outline-none transition-colors placeholder:italic placeholder:text-slate-400 focus:border-amber-600"
-                        />
-                      </div>
                     </div>
                   </FadeInSection>
 
@@ -375,9 +361,6 @@ export default function RSVPSection() {
                       We look forward to seeing you and {summary.guestName}.
                     </span>
                   )}
-                </p>
-                <p className="mt-4 font-sans text-xs text-[#2D2D2D]/60">
-                  Confirmation sent to {summary.email}
                 </p>
               </div>
             )}

@@ -6,6 +6,7 @@ import DetailsSection from "./components/DetailsSection";
 import DressCodeSection from "./components/DressCodeSection";
 import RSVPSection from "./components/RSVPSection";
 import Footer from "./components/Footer";
+import BackgroundMusicToggle from "./components/BackgroundMusicToggle";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <DressCodeSection />
       <RSVPSection />
       <Footer />
+      <BackgroundMusicToggle />
     </div>
   );
 }

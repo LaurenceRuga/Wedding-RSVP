@@ -8,9 +8,10 @@ export default function DetailsSection() {
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat px-4 py-24 md:py-0"
       style={{ backgroundImage: "url('/src/assets/floral-bg.png')" }}
     >
-      <div className="mx-auto grid w-full max-w-5xl grid-cols-1 gap-12 md:grid-cols-2 md:items-stretch">
-        <FadeInSection delay={100}>
-          <div className="mx-4 rounded-3xl bg-white/70 p-10 backdrop-blur-sm md:mx-0">
+      <div className="mx-auto w-full max-w-5xl rounded-2xl border border-[#c9a84c]/30 bg-white/85 p-8 shadow-[0_10px_35px_rgba(0,0,0,0.12)] backdrop-blur-[2px] md:p-10">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-stretch">
+          <FadeInSection delay={100}>
+            <div className="rounded-3xl bg-white/70 p-10 backdrop-blur-[2px]">
             <FadeInSection delay={0}>
               <p className="font-sans text-xs font-medium uppercase tracking-[0.3em] text-amber-700">
                 Wedding Details
@@ -32,14 +33,15 @@ export default function DetailsSection() {
                 </div>
               </div>
             </FadeInSection>
-          </div>
-        </FadeInSection>
+            </div>
+          </FadeInSection>
 
-        <FadeInSection delay={150}>
-          <div className="mx-4 flex min-h-[20rem] flex-col overflow-hidden rounded-3xl bg-white/15 backdrop-blur-md md:mx-0 md:h-full">
-            <WeddingMap />
-          </div>
-        </FadeInSection>
+          <FadeInSection delay={150}>
+            <div className="flex min-h-[20rem] flex-col rounded-3xl bg-white/15 backdrop-blur-[2px] md:h-full">
+              <WeddingMap />
+            </div>
+          </FadeInSection>
+        </div>
       </div>
     </section>
   );
