@@ -1,5 +1,5 @@
 import FadeInSection from "./FadeInSection";
-import titanicStory from "../assets/titanic-anniversary.webp";
+import titanicStory from "../assets/our-story-bg.png";
 
 export default function OurStorySection() {
   return (
