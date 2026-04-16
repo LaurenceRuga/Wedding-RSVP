@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const AUDIO_SOURCE = "https://youtu.be/a7Zle7sdTTs?si=SrOcOTIgMoHQ67yt";
+const AUDIO_SOURCE = "/music/wedding-song.mp3";
 
 export default function BackgroundMusicToggle() {
   const audioRef = useRef(null);
@@ -39,9 +39,21 @@ export default function BackgroundMusicToggle() {
 
     window.addEventListener("pointerdown", playOnInteraction, { once: false });
     window.addEventListener("keydown", playOnInteraction, { once: false });
+
+    // Keeps playback continuous if loop is interrupted on some browsers.
+    const forceLoop = () => {
+      audio.currentTime = 0;
+      audio.play().catch(() => {
+        setNeedsInteraction(true);
+        setIsPlaying(false);
+      });
+    };
+    audio.addEventListener("ended", forceLoop);
+
     return () => {
       window.removeEventListener("pointerdown", playOnInteraction);
       window.removeEventListener("keydown", playOnInteraction);
+      audio.removeEventListener("ended", forceLoop);
     };
   }, [needsInteraction]);
 

@@ -1,14 +1,14 @@
 export default function WeddingMap() {
   const googleMapsEmbedUrl =
-    "https://www.google.com/maps?q=Grand+Ballroom,+RMS+Titanic,+Southampton&output=embed";
+    "https://www.google.com/maps?q=Christ+Church+Cathedral,+Christchurch+Pl,+Wood+Quay,+Dublin&output=embed";
   const googleMapsDirectionsUrl =
-    "https://www.google.com/maps/search/?api=1&query=Grand+Ballroom,+RMS+Titanic,+Southampton";
+    "https://www.google.com/maps/search/?api=1&query=Christ+Church+Cathedral,+Christchurch+Pl,+Wood+Quay,+Dublin";
 
   return (
     <div className="relative h-80 min-h-[20rem] w-full md:h-full md:min-h-[22rem]">
       <div className="h-full w-full overflow-hidden rounded-[12px] border-2 border-[#c9a84c] shadow-[0_4px_20px_rgba(0,0,0,0.15)]">
         <iframe
-          title="Google Map to Grand Ballroom, RMS Titanic"
+          title="Google Map to Christ Church Cathedral, Dublin"
           src={googleMapsEmbedUrl}
           className="h-full w-full border-0"
           loading="lazy"

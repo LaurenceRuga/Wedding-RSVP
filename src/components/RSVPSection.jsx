@@ -272,8 +272,8 @@ export default function RSVPSection() {
                           }`}
                         >
                           <span
-                            className={`absolute top-1 h-6 w-6 rounded-full bg-white transition-all ${
-                              isBringingGuest ? "translate-x-7" : "translate-x-1"
+                            className={`absolute left-1 top-1 h-6 w-6 rounded-full bg-white transition-all ${
+                              isBringingGuest ? "translate-x-6" : "translate-x-0"
                             }`}
                           />
                         </button>
